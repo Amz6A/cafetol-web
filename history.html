@@ -157,70 +157,124 @@
         </div>
     </header>
 
-    <main>
-        <section id="history" class="content-section fade-in">
-            <div class="container text-center">
-                <h2>Historia</h2>
-                <div class="slideshow-container" style="position: relative; max-width: 800px; margin: 2rem auto; overflow: hidden; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
-                    <div class="mySlides fade" style="display: block;">
-                        <img src="CAFETOL VIEJO.JPG" style="width:100%; max-height: 500px; object-fit: cover;">
-                        <div class="text" style="color: #fff; background: rgba(0,0,0,0.6); position: absolute; bottom: 0; width: 100%; padding: 15px; font-size: 1.2rem;">Primer Empaque de Cafetol</div>
-                    </div>
-                    <div class="mySlides fade" style="display: none;">
-                        <img src="CAFETOL VIEJO 3.JPG" style="width:100%; max-height: 500px; object-fit: cover;">
-                        <div class="text" style="color: #fff; background: rgba(0,0,0,0.6); position: absolute; bottom: 0; width: 100%; padding: 15px; font-size: 1.2rem;">Juan Granados en Comfaoriente, Cafetol 2010</div>
-                    </div>
-                    <div class="mySlides fade" style="display: none;">
-                        <img src="CAFETOL VIEJO FERIA.JPG" style="width:100%; max-height: 500px; object-fit: cover;">
-                        <div class="text" style="color: #fff; background: rgba(0,0,0,0.6); position: absolute; bottom: 0; width: 100%; padding: 15px; font-size: 1.2rem;">Feria Microempresarial de la Mujer, 2010</div>
-                    </div>
-                    <div class="mySlides fade" style="display: none;">
-                        <img src="PAQUETES ANTIGUOS.jpg" style="width:100%; max-height: 500px; object-fit: cover;">
-                        <div class="text" style="color: #fff; background: rgba(0,0,0,0.6); position: absolute; bottom: 0; width: 100%; padding: 15px; font-size: 1.2rem;">Estanteria en la Tostadora</div>
-                    </div>
-                    <div class="mySlides fade" style="display: none;">
-                        <img src="PAQUETES ANTIGUOS UNO.jpg" style="width:100%; max-height: 500px; object-fit: cover;">
-                        <div class="text" style="color: #fff; background: rgba(0,0,0,0.6); position: absolute; bottom: 0; width: 100%; padding: 15px; font-size: 1.2rem;">Presentacion Anterior del Empaquetado</div>
-                    </div>
-                    <div class="mySlides fade" style="display: none;">
-                        <img src="BIOEXPO.png" style="width:100%; max-height: 500px; object-fit: cover;">
-                        <div class="text" style="color: #fff; background: rgba(0,0,0,0.6); position: absolute; bottom: 0; width: 100%; padding: 15px; font-size: 1.2rem;">Presentacion BioExpo</div>
-                    </div>
-                    <a class="prev" onclick="plusSlides(-1)" style="cursor: pointer; position: absolute; top: 50%; width: auto; padding: 16px; margin-top: -22px; color: white; font-weight: bold; font-size: 24px; transition: 0.6s ease; border-radius: 0 3px 3px 0; user-select: none; left: 0; background-color: rgba(0,0,0,0.4); text-decoration: none;">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)" style="cursor: pointer; position: absolute; top: 50%; width: auto; padding: 16px; margin-top: -22px; color: white; font-weight: bold; font-size: 24px; transition: 0.6s ease; border-radius: 3px 0 0 3px; user-select: none; right: 0; background-color: rgba(0,0,0,0.4); text-decoration: none;">&#10095;</a>
-                </div>
-                <div style="text-align:center; margin-bottom: 2rem;">
-                    <span class="dot" onclick="currentSlide(1)" style="cursor: pointer; height: 15px; width: 15px; margin: 0 4px; background-color: #717171; border-radius: 50%; display: inline-block; transition: background-color 0.6s ease;"></span> 
-                    <span class="dot" onclick="currentSlide(2)" style="cursor: pointer; height: 15px; width: 15px; margin: 0 4px; background-color: #717171; border-radius: 50%; display: inline-block; transition: background-color 0.6s ease;"></span> 
-                    <span class="dot" onclick="currentSlide(3)" style="cursor: pointer; height: 15px; width: 15px; margin: 0 4px; background-color: #717171; border-radius: 50%; display: inline-block; transition: background-color 0.6s ease;"></span> 
-                    <span class="dot" onclick="currentSlide(4)" style="cursor: pointer; height: 15px; width: 15px; margin: 0 4px; background-color: #717171; border-radius: 50%; display: inline-block; transition: background-color 0.6s ease;"></span> 
-                    <span class="dot" onclick="currentSlide(5)" style="cursor: pointer; height: 15px; width: 15px; margin: 0 4px; background-color: #717171; border-radius: 50%; display: inline-block; transition: background-color 0.6s ease;"></span> 
-                    <span class="dot" onclick="currentSlide(6)" style="cursor: pointer; height: 15px; width: 15px; margin: 0 4px; background-color: #717171; border-radius: 50%; display: inline-block; transition: background-color 0.6s ease;"></span> 
-                </div>
-                <div class="history-text placeholder-section" style="max-width: 800px; margin: 3rem auto; text-align: left; padding: 2rem; background: rgba(0,0,0,0.03); border-radius: 8px;">
-                    <p style="font-size: 1.1rem; line-height: 1.6; color: var(--clr-text-light);">[Aquí podrás insertar el texto detallado sobre la evolución y la historia completa de Cafetol a través de los años. Este espacio está reservado para ese propósito.]</p>
+    <main style="position: relative; z-index: 0;">
+        <!-- Fixed Backgrounds: Placed outside the transformed section to avoid z-index/fixed coordinate breaking -->
+        <div id="history-bgs" style="position: fixed; top: 0; left: 0; height: 100vh; width: 100vw; overflow: hidden; z-index: -1;">
+            <div class="bg-overlay" style="position: absolute; inset: 0; background: rgba(0,0,0,0.75); z-index: 1;"></div>
+        </div>
+
+        <section id="history" class="content-section fade-in" style="position: relative; background-color: transparent; color: white; padding: 0;">
+            <!-- Scrollable Content -->
+            <style>
+                .scrolly-text {
+                    max-width: 900px;
+                    margin: 0 auto;
+                    text-align: justify;
+                    font-size: 1.3rem;
+                    line-height: 1.8;
+                    padding: 2rem 1.5rem;
+                }
+                .scrolly-text p {
+                    margin-bottom: 35vh;
+                    color: rgba(255,255,255,0.95);
+                    text-shadow: 0px 4px 20px rgba(0,0,0,0.9), 0px 2px 10px rgba(0,0,0,0.8), 0px 0px 5px rgba(0,0,0,1);
+                    font-weight: 500;
+                }
+                .scrolly-text p:last-child {
+                    margin-bottom: 10vh;
+                }
+                .inline-logo {
+                    height: 2.75em;
+                    vertical-align: middle;
+                    margin: 0 0.15em;
+                    filter: brightness(0) invert(1);
+                }
+                @media (max-width: 900px) {
+                    .container.text-center {
+                        padding-top: 4rem !important;
+                    }
+                    h2 {
+                        font-size: 2.8rem !important;
+                        margin-bottom: 2rem !important;
+                    }
+                    .scrolly-text {
+                        font-size: 1.15rem;
+                        padding: 1rem;
+                    }
+                    .scrolly-text p {
+                        margin-bottom: 30vh;
+                    }
+                    .inline-logo {
+                        height: 2.75em;
+                    }
+                }
+            </style>
+            <div class="container text-center" style="position: relative; z-index: 2; padding: 6rem 0 50vh 0;">
+                <h2 style="margin-bottom: 3rem; font-size: 3.5rem; color: var(--clr-white); text-shadow: 2px 2px 10px rgba(0,0,0,0.8);">Historia</h2>
+                <div class="scrolly-text">
+                    <p>
+                        <img src="vector_text_filled.svg" alt="Cafetol" class="inline-logo"> es una organización cafetera colombiana fundada el 19 de enero de 2004 en la vereda Santa Ana, municipio de Toledo, en el departamento de Norte de Santander. Su creación quedó registrada en el acta 01 de ese mismo año, y posteriormente fue legalizada ante la Cámara de Comercio de Pamplona el 23 de agosto de 2004. Desde sus inicios, <img src="vector_text_filled.svg" alt="Cafetol" class="inline-logo"> ha trabajado con un enfoque en la producción y comercialización de café especial de alta calidad, representando el potencial cafetero de la región.
+                    </p>
+                    <p>
+                        La iniciativa que dio origen a <img src="vector_text_filled.svg" alt="Cafetol" class="inline-logo"> surgió gracias al esfuerzo constante y visionario de Jorge Ramón González Bohórquez, un asociado que, mediante procesos artesanales, transformaba el café y lo comercializaba en veredas y poblaciones cercanas. Su labor inspiró a un grupo de campesinos de distintas veredas de Toledo, quienes, al reconocer que el café local había sido certificado por la Federación Nacional de Cafeteros como Café de Origen y gozaba de alta demanda tanto a nivel nacional como internacional, decidieron unir esfuerzos para consolidar una empresa asociativa sólida y sostenible.
+                    </p>
+                    <p>
+                        El trabajo asociativo inició con nueve miembros, quienes desarrollaban todo el proceso de manera completamente artesanal. El trillado se realizaba en pilones de madera, la tostión se llevaba a cabo en recipientes metálicos adaptados manualmente, calentados con leña, y la molienda se efectuaba con equipos modificados de uso agrícola. Cada asociado asumía el compromiso de comercializar semanalmente cuatro kilogramos de café procesado, sentando así las bases de una operación organizada y orientada al crecimiento.
+                    </p>
+                    <p>
+                        Tras aproximadamente dos años de trabajo continuo, la asociación logró adquirir el terreno donde hoy se encuentra su planta procesadora. Este avance fue posible gracias al esfuerzo colectivo y a los aportes constantes de sus asociados. En 2008 se construyó la planta; sin embargo, los diseños iniciales requirieron ajustes posteriores para cumplir con las normativas sanitarias establecidas por el INVIMA, lo que implicó mejoras en la infraestructura y en los procesos de producción.
+                    </p>
+                    <p>
+                        A lo largo de su trayectoria, <img src="vector_text_filled.svg" alt="Cafetol" class="inline-logo"> ha mantenido un modelo de trabajo basado en la solidaridad y el compromiso de sus miembros. La organización ha evolucionado progresivamente, mejorando sus procesos productivos, modernizando sus equipos y optimizando la calidad de sus empaques, con el objetivo de ofrecer un café especial que cumpla con los más altos estándares del mercado. La reinversión constante ha sido clave para su crecimiento sostenido.
+                    </p>
+                    <p>
+                        Como toda empresa en desarrollo, <img src="vector_text_filled.svg" alt="Cafetol" class="inline-logo"> ha enfrentado retos internos, incluyendo diferencias entre asociados, cambios en su estructura y la salida de algunos miembros. No obstante, estos desafíos han sido superados, fortaleciendo la organización. Asimismo, la incorporación de nuevas generaciones, incluyendo hijos de los asociados que hoy son profesionales, ha aportado una visión renovada e innovadora, proyectando a <img src="vector_text_filled.svg" alt="Cafetol" class="inline-logo"> hacia el futuro con mayor competitividad y proyección en el sector cafetero.
+                    </p>
                 </div>
             </div>
+            
             <script>
-                let slideIndex = 1;
-                showSlides(slideIndex);
-                function plusSlides(n) { showSlides(slideIndex += n); }
-                function currentSlide(n) { showSlides(slideIndex = n); }
-                function showSlides(n) {
-                    let i;
-                    let slides = document.getElementsByClassName("mySlides");
-                    let dots = document.getElementsByClassName("dot");
-                    if (n > slides.length) {slideIndex = 1}    
-                    if (n < 1) {slideIndex = slides.length}
-                    for (i = 0; i < slides.length; i++) {
-                        slides[i].style.display = "none";  
-                    }
-                    for (i = 0; i < dots.length; i++) {
-                        dots[i].style.backgroundColor = "#717171";
-                    }
-                    if(slides[slideIndex-1]) slides[slideIndex-1].style.display = "block";  
-                    if(dots[slideIndex-1]) dots[slideIndex-1].style.backgroundColor = "var(--clr-primary)";
+                const historySection = document.getElementById('history');
+                const bgsContainer = document.getElementById('history-bgs');
+                const totalImages = 10;
+                const bgLayers = [];
+                
+                // Insert 10 background layers based on HISTORIA1.png to HISTORIA10.png
+                const overlay = document.querySelector('.bg-overlay');
+                for(let i = 1; i <= totalImages; i++) {
+                    const bg = document.createElement('div');
+                    bg.style.position = 'absolute';
+                    bg.style.top = '0';
+                    bg.style.left = '0';
+                    bg.style.width = '100%';
+                    bg.style.height = '100%';
+                    bg.style.backgroundSize = 'cover';
+                    bg.style.backgroundPosition = 'center';
+                    bg.style.backgroundImage = `url('HISTORIA${i}.png')`;
+                    bg.style.transition = 'opacity 0.6s ease-out';
+                    bg.style.opacity = i === 1 ? '1' : '0';
+                    bg.style.zIndex = '0';
+                    bgsContainer.insertBefore(bg, overlay);
+                    bgLayers.push(bg);
                 }
+                
+                // Scroll progress listener to update backgrounds
+                window.addEventListener('scroll', () => {
+                    const rect = historySection.getBoundingClientRect();
+                    const scrollableDistance = rect.height - window.innerHeight;
+                    
+                    if(scrollableDistance > 0) {
+                        let progress = -rect.top / scrollableDistance;
+                        progress = Math.max(0, Math.min(1, progress));
+                        
+                        let currentIndex = Math.floor(progress * totalImages);
+                        if (currentIndex >= totalImages) currentIndex = totalImages - 1;
+                        
+                        bgLayers.forEach((bg, idx) => {
+                            bg.style.opacity = (idx === currentIndex) ? '1' : '0';
+                        });
+                    }
+                });
             </script>
         </section>
     </main>
@@ -237,6 +291,7 @@
             </div>
             <div class="footer-col trademark-col">
                 <p>&copy; 2026 Cafetol Trademark.</p>
+                <p style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.7;">Pagina hecha por: AMarketingZ</p>
             </div>
         </div>
     </footer>

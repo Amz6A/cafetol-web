@@ -325,6 +325,8 @@ footer {
     color: var(--clr-white);
     padding: 5rem 2rem 3rem;
     border-top: 4px solid var(--clr-brown);
+    position: relative;
+    z-index: 10;
 }
 
 .footer-container {

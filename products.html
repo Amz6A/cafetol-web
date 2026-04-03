@@ -165,7 +165,22 @@
                 <div class="hero-product-image" style="margin-bottom: 4rem; margin-top: 2rem;">
                     <img src="PAQUETES GENERAL.png" alt="Paquetes General" style="max-width: 100%; height: auto; max-height: 500px; display: inline-block; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.15));">
                 </div>
-                <div class="products-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 1000px; margin-left: auto; margin-right: auto; gap: 2rem; align-items: stretch;">
+                <style>
+                    .products-page-grid {
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        max-width: 1000px;
+                        margin: 0 auto;
+                        gap: 2rem;
+                        align-items: stretch;
+                    }
+                    @media (max-width: 900px) {
+                        .products-page-grid {
+                            grid-template-columns: 1fr;
+                        }
+                    }
+                </style>
+                <div class="products-page-grid">
                     <div class="product-card" style="display: flex; flex-direction: column; text-align: left; padding: 2rem;">
                         <div class="product-image" style="background-image: url('cafe_gourmet.png'); background-size: contain; background-repeat: no-repeat; background-color: transparent; height: 250px; margin-bottom: 1.5rem;"></div>
                         <h3 style="text-align: center; margin-bottom: 1rem;">Café Gourmet</h3>
@@ -193,6 +208,7 @@
             </div>
             <div class="footer-col trademark-col">
                 <p>&copy; 2026 Cafetol Trademark.</p>
+                <p style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.7;">Pagina hecha por: AMarketingZ</p>
             </div>
         </div>
     </footer>
